@@ -1,7 +1,7 @@
 // import App from "./App.js";
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "../js/App";
+import App from "./App";
 
 window.onload = () => {
   const $startButton = document.querySelector(".start");
@@ -15,8 +15,10 @@ window.onload = () => {
       },
       tabs => {
         // Send message to script file
-        chrome.tabs.sendMessage(tabs[0].id, { injectApp: true }, response =>
-          window.close()
+        chrome.tabs.sendMessage(
+          tabs[0].id,
+          { injectApp: true },
+          response => {}
         );
       }
     );

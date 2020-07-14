@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Name of your chrome extension",
   "version": "1.0",
-  "description": "Description of your chrome extension.",
+  "description": "DEVELOPMENT build with simple auto-reloader\n[2020-07-14 20:54:32] waiting for changes...",
   "chrome_url_overrides": {
     "newtab": "newTab/tab.html"
   },
@@ -17,6 +17,7 @@
   "content_scripts": [
     {
       "js": [
+        "assets/content-script-reloader-2840d5e9.js",
         "assets/main-1036aae6.js"
       ],
       "matches": [
@@ -27,13 +28,14 @@
   ],
   "background": {
     "scripts": [
+      "assets/background-page-reloader-30f5f542.js",
       "assets/background-8670e6ad.js"
     ],
-    "persistent": false
+    "persistent": true
   },
   "web_accessible_resources": [
     "index-0dd58a3a.js",
-    "App-8757bd69.js",
+    "toConsumableArray-3f847b04.js",
     "js/main.js"
   ]
 }
